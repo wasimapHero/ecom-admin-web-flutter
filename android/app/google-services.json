@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "677745574096",
+    "project_id": "ecom-admin-web-flutter-e3f8e",
+    "storage_bucket": "ecom-admin-web-flutter-e3f8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677745574096:android:aaa8362a1cae0ce4d75ed5",
+        "android_client_info": {
+          "package_name": "com.example.web_by_flutter_ecom_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHrT4-rUV1FASPzHAbKm7BpqNf-v_c0qg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
