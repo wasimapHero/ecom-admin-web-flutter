@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:web_by_flutter_ecom_admin/utils/constants/sizes.dart';
 
 class TDeviceUtils {
   static void hideKeyboard(BuildContext context) {
@@ -111,6 +112,15 @@ class TDeviceUtils {
     }
   }
 
+  static bool isDesktopScreenSize (BuildContext context) {
+    return MediaQuery.of(context).size.width >= TSizes.desktopScreenSize;
+  }
+  static bool isTabletScreenSize (BuildContext context) {
+    return MediaQuery.of(context).size.width < TSizes.desktopScreenSize && MediaQuery.of(context).size.width >= TSizes.tabletScreenSize ;
+  }
+  static bool isMobileScreenSize (BuildContext context) {
+    return MediaQuery.of(context).size.width < TSizes.tabletScreenSize;
+  }
 
 // Add more device utility methods as per your specific requirements.
 }

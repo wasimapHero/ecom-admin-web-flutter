@@ -64,6 +64,9 @@ dependencies:
   cloud_firestore: ^4.17.2
   firebase_storage: ^11.7.4
 
+  # dynamic_path_url_strategy:
+  url_strategy: ^0.3.0
+
 
 
   #--------------- ./ PACKAGES END ------------------#
