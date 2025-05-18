@@ -112,13 +112,13 @@ class TDeviceUtils {
     }
   }
 
-  static bool isDesktopScreenSize (BuildContext context) {
+  static bool isDesktopScreen (BuildContext context) {
     return MediaQuery.of(context).size.width >= TSizes.desktopScreenSize;
   }
-  static bool isTabletScreenSize (BuildContext context) {
+  static bool isTabletScreen (BuildContext context) {
     return MediaQuery.of(context).size.width < TSizes.desktopScreenSize && MediaQuery.of(context).size.width >= TSizes.tabletScreenSize ;
   }
-  static bool isMobileScreenSize (BuildContext context) {
+  static bool isMobileScreen (BuildContext context) {
     return MediaQuery.of(context).size.width < TSizes.tabletScreenSize;
   }
 

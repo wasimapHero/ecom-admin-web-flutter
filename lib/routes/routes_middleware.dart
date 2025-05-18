@@ -10,6 +10,6 @@ class TRouteMiddleware extends GetMiddleware{
     print('-------------------------Middleware called-------------------------');
     bool isAuthenticated = true;
 
-    return isAuthenticated ? null : RouteSettings(name: TRoutes.firstScreen) ;
+    return isAuthenticated ? null : RouteSettings(name: TRoutes.login) ;
   }
 }

@@ -24,9 +24,9 @@ class App extends StatelessWidget {
       // initialBinding: GeneralBindings(),
 
       getPages: TAppRoute.pages,
-      initialRoute: TRoutes.firstScreen,
+      initialRoute: TRoutes.login,
       unknownRoute: GetPage(name: '/page-not-found', page: () => Scaffold(body: Center(child: Text("Page Not Found!"),),)),
-      home:  ResponsiveDesignPage(),
+      
       // home:  DesktopLayout(),
     );
   }
@@ -161,7 +161,6 @@ class Desktop extends StatelessWidget {
     );
   }
 }
-
 
 
 class FirstScreen extends StatelessWidget {
