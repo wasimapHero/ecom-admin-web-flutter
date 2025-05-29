@@ -155,6 +155,27 @@ class TImages {
   //Profile
   static const String user = "assets/images/content/user.png";
 
+
+  // -- Lottie Animations
+  static String defaultLoaderAnimation = "assets/images/animations/default-loader-animation.json";
+  static String securityAnimation = "assets/images/animations/67263-security-icon-transparent.json";
+  static String successfullyRegisteredAnimation = "assets/images/animations/72462-check-register.json";
+  static String emptyAnimation = "assets/images/animations/53207-empty-file.json";
+  static String searchAnimation = "assets/images/animations/72785-searching.json";
+  static String packageAnimation = "assets/images/animations/98783-packaging-in-progress.json";
+  static String thankYouAnimation = "assets/images/animations/104368-thank-you.json";
+  static String paperPlaneAnimation = "assets/images/animations/110052-paper-plane.json";
+  static String paymentSuccessfulAnimation = "assets/images/animations/120978-payment-successful.json";
+  static String carAnimation = "assets/images/animations/136491-animation-lottie-car-rides.json";
+  static String pencilAnimation = "assets/images/animations/140429-pencil-drawing.json";
+  static String loadingJuggleAnimation = "assets/images/animations/141397-loading-juggle.json";
+  static String docerAnimation = "assets/images/animations/141594-animation-of-docer.json";
+  static String cloudUploadingAnimation = "assets/images/animations/cloud-uploading-animation.json";
+  static String congratulationAnimation = "assets/images/animations/congratulation.json";
+  static String cartAnimation = "assets/images/animations/lady-adding-product-in-cart-animation.json";
+  static String loaderAnimation = "assets/images/animations/loader-animation.json";
+
+
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";
   static const String googlePay = "assets/icons/payment_methods/google-pay.png";
@@ -165,5 +186,10 @@ class TImages {
   static const String paystack = "assets/icons/payment_methods/paystack.png";
   static const String paytm = "assets/icons/payment_methods/paytm.png";
   static const String successfulPaymentIcon = "assets/icons/payment_methods/successful_payment_icon.png";
+
+
+
+
+
 }
 

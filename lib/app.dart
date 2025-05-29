@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:web_by_flutter_ecom_admin/common/widgets/containers/rounded_container.dart';
+import 'package:web_by_flutter_ecom_admin/bindings/general_bindings.dart';
 import 'package:web_by_flutter_ecom_admin/common/widgets/layouts/templates/site_layout.dart';
-import 'package:web_by_flutter_ecom_admin/common/widgets/responsive/screens/desktop_layout.dart';
-import 'package:web_by_flutter_ecom_admin/common/widgets/responsive/screens/responsive_design.dart';
 import 'package:web_by_flutter_ecom_admin/routes/app_routes.dart';
 import 'package:web_by_flutter_ecom_admin/routes/route.dart';
 import 'package:web_by_flutter_ecom_admin/utils/constants/text_strings.dart';
@@ -21,10 +19,10 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      // initialBinding: GeneralBindings(),
+      initialBinding: GeneralBindings(),
 
       getPages: TAppRoute.pages,
-      initialRoute: TRoutes.login,
+      initialRoute: TRoutes.dashboard,
       unknownRoute: GetPage(name: '/page-not-found', page: () => Scaffold(body: Center(child: Text("Page Not Found!"),),)),
       
       // home:  DesktopLayout(),

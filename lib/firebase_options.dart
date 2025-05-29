@@ -4,16 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -47,28 +37,31 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBwosaoz4x8JN3x-tO6IQMLC-eouUZTkPY',
-    appId: '1:677745574096:web:c03d5a4244d88960d75ed5',
-    messagingSenderId: '677745574096',
-    projectId: 'ecom-admin-web-flutter-e3f8e',
-    authDomain: 'ecom-admin-web-flutter-e3f8e.firebaseapp.com',
-    storageBucket: 'ecom-admin-web-flutter-e3f8e.firebasestorage.app',
+    apiKey: 'AIzaSyDtq5G86zQUYE-yuS9DxdHp8kMZOaR-SF4',
+    appId: '1:659081979812:web:6b8b1cc7666b26230fc331',
+    messagingSenderId: '659081979812',
+    projectId: 'chat-app-9b76b',
+    authDomain: 'chat-app-9b76b.firebaseapp.com',
+    storageBucket: 'chat-app-9b76b.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDHrT4-rUV1FASPzHAbKm7BpqNf-v_c0qg',
-    appId: '1:677745574096:android:aaa8362a1cae0ce4d75ed5',
-    messagingSenderId: '677745574096',
-    projectId: 'ecom-admin-web-flutter-e3f8e',
-    storageBucket: 'ecom-admin-web-flutter-e3f8e.firebasestorage.app',
+    apiKey: 'AIzaSyD7xbGFmHOhm7cJvzw2yAgYpmVAjG8MCoU',
+    appId: '1:659081979812:android:df91374f773c048c0fc331',
+    messagingSenderId: '659081979812',
+    projectId: 'chat-app-9b76b',
+    storageBucket: 'chat-app-9b76b.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDz-KAtoxExJ_joZU22o9YnapEktouSvZk',
-    appId: '1:677745574096:ios:c7865fd172f1d85fd75ed5',
-    messagingSenderId: '677745574096',
-    projectId: 'ecom-admin-web-flutter-e3f8e',
-    storageBucket: 'ecom-admin-web-flutter-e3f8e.firebasestorage.app',
+    apiKey: 'AIzaSyAYa4nAhd9QAwE85IhA_yQ6qflzGRB_6Gw',
+    appId: '1:659081979812:ios:2633a30a0a41c0170fc331',
+    messagingSenderId: '659081979812',
+    projectId: 'chat-app-9b76b',
+    storageBucket: 'chat-app-9b76b.appspot.com',
+    androidClientId: '659081979812-o6dsd67kfe0gpn80cdckvd9f736ok54t.apps.googleusercontent.com',
+    iosClientId: '659081979812-e5kj008rifurt2gsls6in7508t0qoii5.apps.googleusercontent.com',
     iosBundleId: 'com.example.webByFlutterEcomAdmin',
   );
+
 }

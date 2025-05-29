@@ -2,6 +2,11 @@
 /// This class contains all the App Text in String formats.
 class TTexts {
 
+  // -- Admin Default Credentials
+  static const String adminEmail = 'wasimaesty@gmail.com';
+  static const String adminPassword = 'Admin@123';
+
+
   // -- GLOBAL Texts
   static const String and = "and";
   static const String skip = "Skip";

@@ -2,11 +2,9 @@ class TRoutes {
   static const firstScreen = '/';
   static const secondScreen = '/second-screen/';
   static const secondScreenWithDirectParameters = '/second-screen/:userValue';
-  static const responsiveDesignPageScreen = '/responsiveDesignPage/';
+  static const responsiveDesignPageScreen = '/responsive-design-page/';
 
-  static List sideMenuItems = [
-    firstScreen, secondScreen, secondScreenWithDirectParameters, responsiveDesignPageScreen
-  ];
+
 
   static const login = '/login';
   static const forgetPassword = '/forget-password';
@@ -33,4 +31,9 @@ class TRoutes {
   static const orders = '/orders';
   static const createOrder = '/create-order';
   static const editOrder = '/edit-order';
+  
+    static List sideMenuItems = [
+    // firstScreen, secondScreen, secondScreenWithDirectParameters, responsiveDesignPageScreen
+    dashboard
+  ];
 }

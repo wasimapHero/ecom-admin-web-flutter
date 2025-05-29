@@ -1,5 +1,38 @@
 
 class TValidator {
+
+/// Empty Text Validation
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is required.';
+    }
+
+
+    return null;
+  }
+
+/// UserName Validation
+  static String? validateUserName(String? userName) {
+    if (userName == null || userName.isEmpty) {
+      return 'UserName is required.';
+    }
+
+    // Define a Regular expression for userName validation
+    const pattern = r"^[a-zA-Z0-9_-]{3,20}$";
+    final regex = RegExp(pattern);
+
+    if (!regex.hasMatch(userName)) {
+      bool isValid = !userName.startsWith('_') && !userName.startsWith('-') && !userName.endsWith('_') && !userName.startsWith('-');
+      if(!isValid) 
+      return "UserName is not valid. Please avoid using '-' and '_' at the start/end";
+    }
+
+    return null;
+  }
+
+
+
+ /// UserEmail Validation
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';
@@ -15,6 +48,9 @@ class TValidator {
     return null;
   }
 
+
+
+/// UserPassword Validation
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Password is required.';
@@ -43,6 +79,9 @@ class TValidator {
     return null;
   }
 
+
+
+/// User PhoneNumber Validation
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
       return 'Phone number is required.';
