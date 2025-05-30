@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:web_by_flutter_ecom_admin/data/models_abstract/user_model.dart';
+import 'package:web_by_flutter_ecom_admin/data/repositories/authentication/authentication_repository.dart';
 import 'package:web_by_flutter_ecom_admin/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:web_by_flutter_ecom_admin/utils/exceptions/firebase_exceptions.dart';
 import 'package:web_by_flutter_ecom_admin/utils/exceptions/format_exceptions.dart';
@@ -29,4 +30,29 @@ class UserRepository extends GetxController{
       throw 'Something went wrong. Please try again';
     }
   }
+
+
+ 
+  // Fetches user details based on user ID
+    Future<UserModel> fecthAdminDetails() async{
+      try {  
+        final docSnapshot = await _db.collection('LilacEcomUsers').doc(AuthenticationRepository.instance.authUser!.uid).get();
+       return UserModel.fromSnapshot(docSnapshot);                           //user datar pathano id diye doc ana holo.
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+    }
+
+
+
+
+    
 }

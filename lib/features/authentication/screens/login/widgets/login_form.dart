@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:web_by_flutter_ecom_admin/data/repositories/authentication/authentication_repository.dart';
 import 'package:web_by_flutter_ecom_admin/features/authentication/controllers/login_controller.dart';
 import 'package:web_by_flutter_ecom_admin/routes/app_routes.dart';
 import 'package:web_by_flutter_ecom_admin/routes/route.dart';
 import 'package:web_by_flutter_ecom_admin/utils/constants/sizes.dart';
 import 'package:web_by_flutter_ecom_admin/utils/constants/text_strings.dart';
+import 'package:web_by_flutter_ecom_admin/utils/popups/loaders.dart';
 import 'package:web_by_flutter_ecom_admin/utils/validators/validation.dart';
 
 class TLoginForm extends StatelessWidget {
@@ -80,8 +82,12 @@ class TLoginForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(onPressed: () {
                 controller.registerAdmin();
+                // to check if authenticated admin and also to check firebase connection
+              //  TLoaders.successSnackBar(title: AuthenticationRepository.instance.IsAuthenticated.toString());
               }, child: Text(TTexts.signIn)),
-            )
+            ),
+
+            
           
           ],
         ),

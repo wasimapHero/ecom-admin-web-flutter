@@ -23,8 +23,10 @@ class TFullScreenLoader {
           width: double.infinity,
           height: double.infinity,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              const SizedBox(height: 250), // Adjust the spacing as needed
+              
+              const SizedBox(height: 25), // Adjust the spacing as needed
               TAnimationLoaderWidget(text: text, animation: animation),
             ],
           ),

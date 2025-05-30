@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:web_by_flutter_ecom_admin/routes/route.dart';
 import 'package:web_by_flutter_ecom_admin/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:web_by_flutter_ecom_admin/utils/exceptions/firebase_exceptions.dart';
 import 'package:web_by_flutter_ecom_admin/utils/exceptions/format_exceptions.dart';
@@ -18,6 +19,7 @@ class AuthenticationRepository extends GetxController {
 
     // Get IsAuthenticated User
     bool get IsAuthenticated => authUser != null;
+    
 
     @override
   void onReady() {
@@ -25,6 +27,20 @@ class AuthenticationRepository extends GetxController {
     //dashboard , otherwise to login page.  
     _auth.setPersistence(Persistence.LOCAL);  // only for web
     super.onReady();
+  }
+
+
+  // Function to determine the relevant screen and redirect accordingly
+  void screenRedirect() async {
+    final user = _auth.currentUser;
+
+    // if user is logged in
+    if (user != null) {
+      // Navigate to the Home
+      Get.offAllNamed(TRoutes.dashboard);
+    }else {
+      Get.offAllNamed(TRoutes.login);
+    }
   }
 
   // LOGIN
@@ -60,4 +76,22 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
+
+    // LOGOUT USER
+    Future<void> logout() async{
+      try {  
+        await FirebaseAuth.instance.signOut();
+        Get.offAllNamed(TRoutes.login);                       //user datar pathano id diye doc ana holo.
+      } on FirebaseAuthException catch (e) {
+        throw TFirebaseAuthException(e.code).message;
+      } on FirebaseException catch (e) {
+        throw TFirebaseException(e.code).message;
+      } on FormatException catch (_) {
+        throw TFormatException();
+      } on PlatformException catch (e) {
+        throw TPlatformException(e.code).message;
+      } catch (e) {
+        throw 'Something went wrong. Please try again';
+      }
+      }
 }

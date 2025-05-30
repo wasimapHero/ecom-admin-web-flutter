@@ -33,6 +33,22 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="flutter_bootstrap.js" async>
+
+    // Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDtq5G86zQUYE-yuS9DxdHp8kMZOaR-SF4",
+  authDomain: "chat-app-9b76b.firebaseapp.com",
+  projectId: "chat-app-9b76b",
+  storageBucket: "chat-app-9b76b.appspot.com",
+  messagingSenderId: "659081979812",
+  appId: "1:659081979812:web:6b8b1cc7666b26230fc331"
+};
+
+// Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+
+  </script>
 </body>
 </html>
